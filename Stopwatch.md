@@ -1,6 +1,3 @@
-# ApplicationDevelopment
-BUS 353 Stopwatch
-
 setBackgroundColor('#6A5ACD');
 
 var win = createWindow({
