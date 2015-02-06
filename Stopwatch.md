@@ -1,5 +1,5 @@
 # ApplicationDevelopment
-BUS 353 Repository
+BUS 353 Stopwatch
 
 setBackgroundColor('#6A5ACD');
 
