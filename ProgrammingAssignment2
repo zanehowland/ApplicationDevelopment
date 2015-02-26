@@ -1,0 +1,64 @@
+Titanium.UI.setBackgroundColor('#993300');
+
+var tabGroup = Titanium.UI.createTabGroup();
+
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#33CCFF'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Big Blue',
+    window:win1
+});
+
+var label1 = Titanium.UI.createLabel({
+	color:'#000066',
+	text:'Big Blue is A Site for the Largest Blue Whale ever seen by Mankind',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+
+win1.add(label1);
+
+
+var win2 = Titanium.UI.createWindow({  
+    title:'Little Blue',
+    backgroundColor:'#000066'
+});
+var tab2 = Titanium.UI.createTab({  
+    icon:'KS_nav_ui.png',
+    title:'Little Blue',
+    window:win2
+});
+
+var label2 = Titanium.UI.createLabel({
+	color:'#33CCFF',
+	text:'Little Blue is The Younger Brother of the Largest Blue Whale ever seen by Mankind',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
+});
+
+
+win2.add(label2);
+
+var switchOrientation = Ti.UI.createButton({title: 'Make Landscape'});
+switchOrientation.addEventListener('click', rotateLayout);
+
+var layout = Ti.UI.createView({layout: 'vertical'});
+layout.add(switchOrientation);
+
+function rotatelayout() {
+	win1.orientationModes = [Ti.UI.LANDSCAPE_LEFT];
+	switchOreintation.hide();
+}
+
+win1.addButton('Make Landscape');
+win1.addEventListener(rotateLayout);
+
+
+tabGroup.addTab(tab1);  
+tabGroup.addTab(tab2);  
+tabGroup.open();
